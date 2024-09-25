@@ -69,17 +69,18 @@ header {
 
 /* HERO SECTION */
 .hero-section {
-  background-image: url('../images/whale-shark.jpg'); 
+  background-image: url('../images/Sorsogon.jpeg');
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center; 
-  justify-content: center; 
-  margin-top: 0; 
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
   margin-bottom: 100px;
   height: 100vh;
   position: relative;
   z-index: 1;
+  transition: background 0.8s ease-in-out; /* Smooth background transition */
 }
 
 .hero-content {
@@ -87,12 +88,27 @@ header {
   text-align: center;
   z-index: 2;
   width: 80rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s forwards ease-in-out; /* Animation for fade-in effect */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start a bit below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End in the original position */
+  }
 }
 
 .hero-content h1 {
-  color: #FF7D29;
+  color: #000000;
   font-size: 3rem;
   font-weight: bold;
+  animation-delay: 0.5s;
 }
 
 .hero-content p {
@@ -100,12 +116,14 @@ header {
   font-size: 1.2rem;
   font-style: italic;
   margin-bottom: 20px;
+  animation-delay: 1s;
 }
 
 .custom-btn {
-  background-color: #b24a3b; 
-  color: #f4ead2; 
-  border: none; 
+  background-color: #b24a3b;
+  color: #f4ead2;
+  border: none;
+  animation-delay: 1.5s;
 }
 
 .custom-btn:hover {
@@ -113,11 +131,45 @@ header {
   color: #f4ead2; /* Text color */
 }
 
-/* ABOUT */
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Starts below the actual position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Ends at its normal position */
+  }
+}
+
+/* Wave Divider */
+.custom-shape-divider-bottom-1727274516 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1727274516 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
+}
+
+.custom-shape-divider-bottom-1727274516 .shape-fill {
+  fill: #FFFFFF;
+}
+
+/* ABOUT SECTION */
 .about-section {
-  color: #3C3633;
-  margin: 0 100px;
-  margin-bottom: 100px;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 2s ease-out forwards; /* Trigger animation on load */
+  animation-delay: 1s; /* Delay to create a slight gap */
 }
 
 .about-section h3 {
@@ -150,10 +202,40 @@ header {
   background-color: lightgray;
 }
 
-/* TRAVEL PARTNERS */
-.partners-container {
+/* Travel Partners Section */
+.partners-section {
+  padding: 50px 0;
+  background-color: #f4f4f4; /* Light grey background */
+  text-align: center;
+}
+
+.partners-title h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3C3633;
+  margin-bottom: 40px;
+}
+
+/* Grid Layout for Partner Logos */
+.partner-logos {
   display: flex;
   justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.partner-logo img {
+  width: 180px;
+  height: auto;
+  filter: grayscale(100%); /* Make logos grey */
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.partner-logo img:hover {
+  filter: grayscale(0%); /* Remove grayscale effect on hover */
+  opacity: 1;
+  transform: scale(1.1); /* Slightly enlarge the logo */
 }
 
 .partners-title h3 {
