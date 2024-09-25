@@ -1,0 +1,360 @@
+/* Global Styles */
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+background-color: #f4ead2;
+line-height: 1.5;
+margin: 0;
+padding: 0;
+}
+
+p {
+color: #222222;
+font-size: 0.8rem;
+}
+
+/* Header */
+header {
+background-color: #f4ead2;
+background-size: cover;
+color: #222222;
+}
+
+h1 {
+color: #222222;
+font-size: 3rem;
+font-weight: bold;
+}
+
+/* Basic styling for navbar */
+.navbar {
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
+/* background-color: #f4ead2; */
+background-color: rgba(244, 234, 210, 0); /* Slightly transparent */
+border-bottom: none;
+transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Navbar background color after scrolling */
+.navbar.scrolled {
+background-color: #f4ead2f8; /* Slightly opaque background */
+}
+
+/* Logo */
+.navbar-brand img {
+width: 50px; /* Adjust size of the logo */
+}
+
+.brand-name {
+color: #222222;
+font-size: 24px;
+font-weight: bold;
+}
+
+.brand-name:hover {
+color: #b24a3b;
+}
+
+.custom-nav-link {
+padding: 10px 20px !important; /* Increase spacing around the links */
+}
+
+.navbar-nav .nav-link {
+font-weight: 500;
+font-size: 16px;
+color: #222222;
+}
+
+.navbar-nav .nav-link:hover {
+color: #b24a3b;
+}
+
+.nav-link.active {
+color: #b24a3b !important;
+border-bottom: 2px solid #b24a3b;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+
+.text {
+  width: 100%;
+  max-width: 1200px;
+  color: #f5f5f5;
+  margin: auto;
+  padding: 40px 35px;
+  text-align: left;
+}
+
+.nav-link {
+  color: #1c1c1c; /* Setting the font color */
+  text-decoration: none; /* Removing underlines from links */
+  padding: 5px 15px; /* Adding padding for better readability */
+  transition: color 0.3s; /* Adding transition effect on color change */
+}
+
+.nav-link:hover {
+  color: #2E8B57; /* Changing font color on hover */
+}
+
+.btn1 {
+  justify-self: right;
+  font-size: 17px;
+  font-weight: 300;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #1c1c1c;
+  text-transform: uppercase;
+  position: relative;
+  transition: .5s ease;
+}
+
+.btn1::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #2E8B57;
+  transition: .5s ease;
+}
+
+.btn1:hover {
+  color: #1c1c1c;
+  transition-delay: .5s;
+}
+
+.btn1:hover::before {
+  width: 100%;
+}
+
+.btn1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #2E8B57;
+  transition: .4s ease;
+  z-index: -1;
+}
+
+.btn1:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: #f5f5f5;
+}
+
+/* FORM STYLE */
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  max-width: 500px;
+  background-color: #f6f3eb;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  margin-top: 120px;
+  margin-bottom: 50px;
+}
+
+.title {
+  font-size: 28px;
+  color: #b24a3b;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  margin-bottom: 0;
+}
+
+.title::before,.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: #b24a3b;
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+  background-color: #b24a3b;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message {
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+.message, .signin {
+  color: rgba(88, 87, 87, 0.71);
+  font-size: 14px;
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a {
+  color: #b24a3b;
+}
+
+.signin a:hover {
+  text-decoration: underline #b24a3b;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: rgb(175, 173, 173);
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid + span {
+  color: #b24a3b;
+}
+
+/* Submit Button Styles */
+input[type="submit"] {
+background-color: #b24a3b;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+text-align: center;
+margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+background-color: #a24031;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* Footer */
+footer {
+background-color: #f4ead2;
+color: #222222;
+margin-top: 80px;
+margin-bottom: 0 !important;
+padding: 15px;
+display: flex;
+justify-content:space-evenly;
+flex-direction: column;
+}
+
+.p-footer {
+color: #222222;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+margin: 10px;
+}
+
+/* Social Media Icons */
+
+.social-links {
+margin: 10px;
+text-align: center;
+}
+
+.social-links a {
+margin: 0 15px;
+color: #222222;
+font-size: 24px;
+transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+color: #b24a3b;
+transform: scale(1.2);
+}
+
+.social-icon {
+font-size: 24px; /* Adjust icon size */
+margin: 0 10px; /* Spacing between icons */
+color: #222222; /* Icon color */
+transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+color: #b24a3b; /* Change color on hover */
+}
+
+/* Remove any extra decorations, dashes, or borders */
+.social-icon i {
+text-decoration: none;
+display: inline-block;
+}
+
+a {
+text-decoration: none;
+}

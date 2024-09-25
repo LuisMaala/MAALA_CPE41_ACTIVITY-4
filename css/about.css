@@ -1,0 +1,294 @@
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4ead2;
+  }
+  
+  /* Header */
+  header {
+    background-color: #f4ead2;
+    background-size: cover;
+    color: #222222;
+  }
+  
+  h1 {
+    color: #222222;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  p {
+    color: #222222;
+    font-size: 0.8rem;
+  }
+  
+  /* Basic styling for navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* background-color: #f4ead2; */
+    background-color: rgba(244, 234, 210, 0); /* Slightly transparent */
+    border-bottom: none;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Navbar background color after scrolling */
+  .navbar.scrolled {
+    background-color: #f4ead2f8; /* Slightly opaque background */
+  }
+  
+  /* Logo */
+  .navbar-brand img {
+    width: 50px; /* Adjust size of the logo */
+  }
+  
+  .brand-name {
+    color: #222222;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .brand-name:hover {
+    color: #b24a3b;
+  }
+  
+  .custom-nav-link {
+    padding: 10px 20px !important; /* Increase spacing around the links */
+  }
+  
+  .navbar-nav .nav-link {
+    font-weight: 500;
+    font-size: 16px;
+    color: #222222;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #b24a3b;
+  }
+  
+  .nav-link.active {
+    color: #b24a3b !important;
+    border-bottom: 2px solid #b24a3b;
+  }
+  
+  /* Header Section */
+    .about-header {
+        position: relative;
+        background: url('../images/img4.jpg') center center/cover no-repeat;
+        height: 100vh; /* Full viewport height for a larger hero section */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 100px;
+        padding-top: 150px;
+        color: #222222;
+    }
+
+    /* Black background overlay with opacity */
+    .about-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #f4ead27c;
+        z-index: 1;
+    }
+
+    .about-header h1 {
+        position: relative;
+        font-size: 5rem;
+        font-weight: bold;
+        color: #a24031;
+        padding: 20px 40px;
+        z-index: 2;
+    }
+
+    /* Introduction Section */
+    .intro-section h1 {
+        font-size: 2rem;
+        line-height: 1.8;
+        color: #222222;
+        text-align: left;
+    }
+    .intro-text {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #222222;
+        text-align: left;
+    }
+
+    /* Core Services Section */
+    .services-section {
+        background-color: #f4ead2;
+    }
+
+    .services-h2 {
+        color: #b24a3b;
+        font-weight: bold;
+        font-size: 3rem;
+        text-align: center; /* Center the content inside each column */
+        margin-bottom: 50px;
+    }
+
+    .service-icon {
+        font-size: 3rem;
+        color: #b24a3b;
+        margin-bottom: 15px;
+    }
+
+    .services-section h4 {
+        font-weight: 700;
+        color: #222222;
+    }
+
+    .services-section p {
+        color: #222222;
+    }
+
+    /* Mission and Vision Section */
+    .mission-vision-section {
+        background-color: #f4ead2;
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .mission-vision-section .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        max-width: 1200px;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .mission-vision-section .col {
+        /* width: 45%;  Width of each column 
+        text-align: left; Center the text */
+        flex: 1; /* Make each column take equal space */
+        padding: 0 20px; /* Add padding for spacing */
+    }
+    
+    .mission-vision-section .col-divider {
+        width: 1px;
+        background-color: #222222;
+        height: auto;
+    }
+    
+    .no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .no-gutters > [class^="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    
+    .mission-vision-section h3 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    
+    .vision-title {
+        color: #b24a3b;
+    }
+    
+    .mission-title {
+        color: #b24a3b;
+    }
+    
+    .mission-vision-section p {
+        font-size: 1.1rem;
+        color: #222222;
+        margin-bottom: 20px;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        background-color: #f4ead2;
+        color: #222222;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .cta-section .btn {
+        background-color: #b24a3b;
+        border: none;
+    }
+
+    .cta-section .btn:hover {
+        background-color: #a24031;
+    }
+
+    .cta-section p {
+        color: #222222;
+    }
+
+  
+    /* Footer */
+    footer {
+        background-color: #f4ead2;
+        color: #222222;
+        margin-top: 80px;
+        margin-bottom: 0 !important;
+        padding: 15px;
+        display: flex;
+        justify-content:space-evenly;
+        flex-direction: column;
+    }
+    
+    .p-footer {
+        color: #222222;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 10px;
+    }
+    
+    /* Social Media Icons */
+    
+    .social-links {
+        margin: 10px;
+        text-align: center;
+    }
+    
+    .social-links a {
+        margin: 0 15px;
+        color: #222222;
+        font-size: 24px;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .social-links a:hover {
+        color: #b24a3b;
+        transform: scale(1.2);
+    }
+    
+    .social-icon {
+        font-size: 24px; /* Adjust icon size */
+        margin: 0 10px; /* Spacing between icons */
+        color: #222222; /* Icon color */
+        transition: color 0.3s ease;
+    }
+    
+    .social-icon:hover {
+        color: #b24a3b; /* Change color on hover */
+    }
+    
+    /* Remove any extra decorations, dashes, or borders */
+    .social-icon i {
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    /* To remove the underline in social media actions */
+    a {
+        text-decoration: none;
+    }

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+</html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="css/signup.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@700;900&family=Staatliches&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <!-- CHANGE TO ACTUAL LOGO -->
+            <img src="images/architrek_logo.png" alt="Logo" style="width: 50px;"> 
+        </a>
+        <a class="brand-name nav-link" href="#">ArchiTrek</a>
+        <!-- Toggler for mobile view -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link custom-nav-link" ref="index.html">Home</a>
+            </li>
+            <li class="nav-item"></li>
+                <a class="nav-link custom-nav-link" href="team.html">Team</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link custom-nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link custom-nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link custom-nav-link" href="contact.html">Contact</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <!-- FORM -->
+    <div class="container">
+        <form class="form" id="create" action="index.html" method="post">
+            <p class="title">Register</p>
+            <p class="message">Sign up to access exclusive architectural designs and project insights.</p>
+            <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input" name="lname">
+                    <span>Last Name</span>
+                </label>
+
+                <label>
+                    <input required="" placeholder="" type="text" class="input" name="fname">
+                    <span>First Name</span>
+                </label>
+                <label>
+                    <input required="" placeholder="" type="text" class="input" name="mname">
+                    <span>Middle Name</span>
+                </label>
+            </div>
+
+            <label>
+                <input required="" placeholder="" type="email" class="input" name="email">
+                <span>Email</span>
+            </label>
+
+            <label>
+                <input required="" placeholder="" type="password" class="input" name="pw">
+                <span>Password</span>
+            </label>
+            <label>
+                <input required="" placeholder="" type="password" class="input" name="verify">
+                <span>Confirm password</span>
+            </label>
+            
+            <!--SUBMIT BUTTON-->
+            <input type="submit" name="submit" value="Submit">
+            
+            <p class="signin">Already have an account? <a href="login.html">Login</a> </p>
+        </form>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <!-- Social Media Links -->
+        <div class="social-links">
+        <a href="https://facebook.com" target="_blank" class="social-icon">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        </div>
+
+        <div class="p-footer">
+        <p>ArchiTrek, Unit 5B, One Corporate Center, Ortigas Avenue, Pasig City, 1605, Philippines</p>
+        <p>Phone: +63 917 123 4567</p>
+        <p>&emsp; Email: contact@architrek.ph</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        window.onscroll = function() {
+        var navbar = document.querySelector('.navbar'); // Select the navbar
+        if (window.pageYOffset > 50) { // Check if the scroll is more than 50px
+            navbar.classList.add('scrolled'); // Add the "scrolled" class
+        } else {
+            navbar.classList.remove('scrolled'); // Remove the "scrolled" class when at the top
+        }
+        };
+    </script>
+
+</body>
+
+</html>

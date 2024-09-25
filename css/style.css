@@ -1,0 +1,369 @@
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4ead2;
+}
+
+/* Header */
+header {
+  background-color: #f4ead2;
+  background-size: cover;
+  color: #222222;
+}
+
+h1 {
+  color: #222222;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+p {
+  color: #222222;
+  font-size: 0.8rem;
+}
+
+/* Basic styling for navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  /* background-color: #f4ead2; */
+  background-color: rgba(244, 234, 210, 0); /* Slightly transparent */
+  border-bottom: none;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Navbar background color after scrolling */
+.navbar.scrolled {
+  background-color: #98ddffa6; /* Slightly opaque background */
+}
+
+/* Logo */
+.navbar-brand img {
+  width: 50px; /* Adjust size of the logo */
+}
+
+.brand-name {
+  color: #222222;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.brand-name:hover {
+  color: #b24a3b;
+}
+
+.custom-nav-link {
+  padding: 10px 20px !important; /* Increase spacing around the links */
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  color: #222222;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #b24a3b;
+}
+
+.nav-link.active {
+  color: #b24a3b !important;
+  border-bottom: 2px solid #b24a3b;
+}
+
+/* Hero Section */
+body .hero-section {
+  position: relative;
+  height: 100vh; /* Adjust this to your desired height (70% of viewport height) */
+  background-image: url('../images/Sorsogon.jpeg'); /* Replace with your actual image URL */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center; /* Vertically centers the content */
+  justify-content: flex-end; /* Horizontally centers the content */
+  margin-top: 0; /* Remove any margin */
+  margin-bottom: 100px;
+  z-index: 1; /* Lower z-index to keep it behind the navbar */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Make sure the content is above the overlay */
+  color: #222222;
+  text-align: right;
+  margin-right: 200px;
+}
+
+.hero-content h1 {
+  font-size: 6rem; /* Adjust for title size */
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 1.2rem; /* Adjust for subtitle size */
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Button Styles */
+.custom-btn {
+  background-color: #b24a3b; /* Change this to your desired color */
+  color: #f4ead2; /* Text color */
+  border: none; /* Remove border if necessary */
+}
+
+.custom-btn:hover {
+  background-color: #e06552; /* Change to a darker shade on hover */
+  color: #f4ead2; /* Text color */
+}
+
+/* INTRO */
+.intro-paragraph {
+  font-style: italic;
+  color: gray;
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin: 100px;
+}
+
+/* Styling for the product collage */
+.product-container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.product-card {
+  position: relative;
+  display: block;
+  margin: 0;
+
+}
+
+.product-card img {
+  width: 100%;
+  height: 300px; /* Set a fixed height */
+  object-fit: cover; /* Crop the image to fit */
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.product-card:hover .overlay {
+  opacity: 1.5; /* Show overlay on hover */
+}
+
+.text {
+  color: #f4ead2;
+  font-size: 1.5rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.product-title {
+  color: #f4ead2;
+  font-size: 1.5rem; /* Adjust size as needed */
+  margin: 0; /* Remove default margin */
+}
+
+.product-category {
+  color: #f4ead2;
+  font-size: 1rem; /* Adjust size as needed */
+  font-style: italic; /* Italicize category */
+  font-weight: 100;
+  margin: 0; /* Remove default margin */
+  bottom: -50px; /* Start off-screen at the bottom */
+}
+
+/* Additional styles to ensure no spacing */
+.row {
+  margin: 0; /* Remove margin from the row */
+}
+
+.col-md-4 {
+  padding: 0; /* Remove padding from columns */
+}
+
+/* Remove margin between rows */
+.container .row {
+  margin-bottom: 0; /* Ensure no space between rows */
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: #f4ead2;
+  /* padding: 40px 20px;
+  text-align: center; */
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.testimonial {
+  /* margin-bottom: 20px; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial p {
+  color: #222222;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/* .header {
+  margin-bottom: 2rem;
+}
+
+.header p {
+  letter-spacing: 2px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.header h1 {
+  font-family: "Noto Serif", serif;
+  font-size: 2rem;
+  font-weight: 900;
+} */
+
+.card {
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  background-color: var(--extra-light);
+  border-radius: 5px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.card i {
+  font-size: 2.5rem;
+  color: #b24a3b;
+}
+
+.card p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.card hr {
+  width: 40px;
+  margin: auto;
+  color: var(--text-light);
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  border-radius: 100%;
+  border: 1px solid var(--primary-color);
+}
+
+.card .name {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.card .name:hover {
+  color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+  background-color: #f4ead2;
+  color: #222222;
+  margin-top: 80px;
+  margin-bottom: 0 !important;
+  padding: 15px;
+  display: flex;
+  justify-content:space-evenly;
+  flex-direction: column;
+}
+
+.p-footer {
+  color: #222222;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+/* Social Media Icons */
+
+.social-links {
+  margin: 10px;
+  text-align: center;
+}
+
+.social-links a {
+  margin: 0 15px;
+  color: #222222;
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #b24a3b;
+  transform: scale(1.2);
+}
+
+.social-icon {
+  font-size: 24px; /* Adjust icon size */
+  margin: 0 10px; /* Spacing between icons */
+  color: #222222; /* Icon color */
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #b24a3b; /* Change color on hover */
+}
+
+/* Remove any extra decorations, dashes, or borders */
+.social-icon i {
+  text-decoration: none;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+}

@@ -1,0 +1,159 @@
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4ead2;
+}
+
+/* Header */
+header {
+  background-color: #f4ead2;
+  background-size: cover;
+  color: #222222;
+}
+
+h1 {
+  color: #222222;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+p {
+  color: #222222;
+  font-size: 0.8rem;
+}
+
+/* Basic styling for navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  /* background-color: #f4ead2; */
+  background-color: rgba(244, 234, 210, 0); /* Slightly transparent */
+  border-bottom: none;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Navbar background color after scrolling */
+.navbar.scrolled {
+  background-color: #f4ead2f8; /* Slightly opaque background */
+}
+
+/* Logo */
+.navbar-brand img {
+  width: 50px; /* Adjust size of the logo */
+}
+
+.brand-name {
+  color: #222222;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.brand-name:hover {
+  color: #b24a3b;
+}
+
+.custom-nav-link {
+  padding: 10px 20px !important; /* Increase spacing around the links */
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  color: #222222;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #b24a3b;
+}
+
+.nav-link.active {
+  color: #b24a3b !important;
+  border-bottom: 2px solid #b24a3b;
+}
+
+.thank-you {
+    text-align: center; /* Center text */
+    margin-top: 100px; /* Space from the top */
+}
+
+.thank-you h1 {
+    margin-bottom: 30px;
+}
+
+.thank-you-text {
+    margin-bottom: 30px;
+}
+
+/* Button Styles */
+.custom-btn {
+    background-color: #b24a3b; /* Change this to your desired color */
+    color: #f4ead2; /* Text color */
+    border: none; /* Remove border if necessary */;
+  }
+  
+.custom-btn:hover {
+    background-color: #e06552; /* Change to a darker shade on hover */
+    color: #f4ead2; /* Text color */
+}
+
+/* Footer */
+footer {
+  background-color: #f4ead2;
+  color: #222222;
+  margin-top: 80px;
+  margin-bottom: 0 !important;
+  padding: 15px;
+  display: flex;
+  justify-content:space-evenly;
+  flex-direction: column;
+}
+
+.p-footer {
+  color: #222222;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+/* Social Media Icons */
+
+.social-links {
+  margin: 10px;
+  text-align: center;
+}
+
+.social-links a {
+  margin: 0 15px;
+  color: #222222;
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #b24a3b;
+  transform: scale(1.2);
+}
+
+.social-icon {
+  font-size: 24px; /* Adjust icon size */
+  margin: 0 10px; /* Spacing between icons */
+  color: #222222; /* Icon color */
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #b24a3b; /* Change color on hover */
+}
+
+/* Remove any extra decorations, dashes, or borders */
+.social-icon i {
+  text-decoration: none;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
