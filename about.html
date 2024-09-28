@@ -20,15 +20,14 @@
 
 <body>
 
-  <!-- Navbar -->
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <!-- Logo -->
       <a class="navbar-brand" href="index.html">
-        <!-- CHANGE TO ACTUAL LOGO -->
-        <img src="images/architrek_logo.png" alt="Logo" style="width: 50px;"> 
+        <img src="images/GoGustoLogo.png" alt="Logo" style="width: 50px;"> 
       </a>
-      <a class="brand-name nav-link" href="index.html">ArchiTrek</a>
+      <a class="brand-name nav-link" href="index.html">GoGusto</a>
       <!-- Toggler for mobile view -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -37,29 +36,46 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link custom-nav-link" href="index.html">Home</a>
+            <a class="nav-link custom-nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active custom-nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-nav-link" href="tourpackage.html">Tour Package</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-nav-link" href="termsandcon.html">Terms & Conditions</a>
           </li>
           <li class="nav-item"></li>
-            <a class="nav-link custom-nav-link" href="team.html">Team</a>
+            <a class="nav-link custom-nav-link" href="quote.html">Contact Us</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active custom-nav-link" aria-current="page" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link custom-nav-link" href="projects.html">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link custom-nav-link" href="quote.html">Quote</a>
-          </li>
+          <button class="btn custom-btn" id="exploreBtn" onclick="window.location.href='quote.html'">Plan Your Trip</button>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Header Section -->
-  <section class="about-header">
-    <div class="container">
-        <h1>About ArchiTrek</h1>
+  <!-- Image Banner Section -->
+<section class="image-banner-section">
+  <div class="container-fluid">
+      <img src="images/Tikling.jpg" alt="Promo Image" class="img-fluid banner-image">
+  </div>
+</section>
+
+
+
+ <!-- ABOUT PREVIEW -->
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-content about-logo">
+        <img src="images/GoGustoLogo.png" alt="Logo" style="width: 500px;">
+      </div>
+      <div class="col-divider"></div>
+      <div class="about-content about-text">
+        <h3>About Us</h3>
+        <p>At GoGusto, we believe that travel is more than just a journey; it's an opportunity to explore, connect, and experience the world in new and exciting ways. With a rich heritage in providing curated travel experiences, GoGusto has been at the forefront of the travel industry, offering unforgettable adventures to travelers worldwide.</p>
+      </div>
     </div>
   </section>
 
@@ -68,12 +84,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>About ArchiTrek</h1>
+                <h1>Our Story</h1>
                 <p class="intro-text">
-                    At ArchiTrek, we are passionate about blending innovation with design excellence. 
-                    From sustainable architecture to bespoke designs, our goal is to bring visionary projects to life, 
-                    tailored to our client's needs. With over a decade of experience, we specialize in architectural 
-                    solutions that define the future of modern spaces.
+                  Founded with a passion for discovery and a commitment to excellence, GoGusto started its journey in the heart of the Philippines, inspired by the diverse landscapes and cultures of the region. Our founders recognized the need for tailored travel solutions that cater to individual preferences, and thus GoGusto was born. Over the years, we have expanded our services, partnering with top tourism associations and government bodies to ensure our clients receive the best travel experiences possible.
                 </p>
             </div>
         </div>
@@ -81,7 +94,7 @@
   </section>
 
   <!-- Core Services Section -->
-  <section class="services-section py-5">
+  <!-- <section class="services-section py-5">
       <div class="container">
           <h2 class="services-h2">Our Core Services</h2>
           <div class="row text-center mt-4">
@@ -102,7 +115,7 @@
               </div>
           </div>
       </div>
-  </section>
+  </section> -->
 
   <!-- Mission and Vision Section -->
   <div class="mission-vision-section">
@@ -119,14 +132,63 @@
     </div>
 </div>
 
+<!-- Accreditation Section -->
+<section class="accreditation-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Trusted Accreditations</h2>
+
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <h4>International Accreditations</h4>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-check-circle"></i> International Air Transport Association (IATA)</li>
+        </ul>
+        <img src="images/iata.png" alt="IATA" class="img-fluid accreditation-logo">
+      </div>
+
+      <div class="col-md-4 text-center">
+        <h4>Government Accreditation</h4>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-check-circle"></i> Department of Tourism</li>
+          <li><i class="fa fa-check-circle"></i> Bureau of Immigration</li>
+        </ul>
+        <img src="images/DOT.png" alt="DOT" class="img-fluid accreditation-logo">
+        <img src="images/BOI.png" alt="BI" class="img-fluid accreditation-logo">
+      </div>
+
+      <div class="col-md-4 text-center">
+        <h4>Local Tourism Associations</h4>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-check-circle"></i> Philippine Travel Agencies Association (PTAA)</li>
+          <li><i class="fa fa-check-circle"></i> Philippine Tour Operators Association (PHILTOA)</li>
+        </ul>
+        <img src="images/PTAA.png" alt="PTAA" class="img-fluid accreditation-logo">
+        <img src="images/Philtoa.png" alt="PHILTOA" class="img-fluid accreditation-logo">
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-md-12 text-center">
+        <h4>Embassy Accreditation</h4>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-check-circle"></i> Embassy of Japan - one of 6 accredited agencies under Category A</li>
+          <li><i class="fa fa-check-circle"></i> Embassy of Singapore - one of 2 only accredited agencies</li>
+          <li><i class="fa fa-check-circle"></i> Embassy of Korea - one of only 10 designated agencies for group visas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   <!-- CTA Section -->
-  <section class="cta-section text-center">
+  <!-- <section class="cta-section text-center">
       <div class="container">
           <h3>Ready to Start Your Next Project?</h3>
           <p>Let's bring your vision to life. Contact us for a quote today!</p>
           <a href="quote.html" class="btn btn-primary">Get a Quote</a>
       </div>
-  </section>
+  </section> -->
 
   <!-- Footer -->
   <footer>

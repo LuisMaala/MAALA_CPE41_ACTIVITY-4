@@ -1,7 +1,7 @@
 /* GLOBAL */
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #F5EDED;
+  background-color: #ffffff;
 }
 
 h1 {
@@ -85,7 +85,7 @@ header {
 
 .hero-content {
   position: relative;
-  text-align: center;
+  /* text-align: center; */
   z-index: 2;
   width: 80rem;
   opacity: 0;
@@ -165,6 +165,69 @@ header {
   fill: #FFFFFF;
 }
 
+/* Enhanced Why Choose Us Section */
+.why-choose-us-section {
+  margin-top: -30px;
+  padding: 0px 20px;
+  background-color: #ffffff; /* Light background */
+  color: #333;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.why-choose-us-block {
+  padding: 20px;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.why-choose-us-block:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+}
+
+.feature-icon {
+  font-size: 20px;
+  color: #77797c; /* Icon color */
+  background-color: #cacaca; /* Light teal background for the circle */
+  border-radius: 50%; /* Make the background a circle */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px; /* Center the icon and add space below */
+}
+
+.why-choose-us-block h4 {
+  font-size: 1rem;
+  color: #120f3b; /* Title color */
+  margin-bottom: 10px;
+}
+
+.why-choose-us-block p {
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .why-choose-us-block {
+    margin-bottom: 30px;
+  }
+}
+
+
+
 /* ABOUT SECTION */
 .about-section {
   opacity: 0; /* Initially hidden */
@@ -204,15 +267,17 @@ header {
 
 /* Travel Partners Section */
 .partners-section {
-  padding: 50px 0;
-  background-color: #f4f4f4; /* Light grey background */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(232, 232, 232)
+  ; /* Light grey background */
   text-align: center;
 }
 
 .partners-title h3 {
   font-size: 2rem;
   font-weight: bold;
-  color: #3C3633;
+  color: black;
   margin-bottom: 40px;
 }
 
@@ -298,4 +363,243 @@ footer {
 
 a {
   text-decoration: none;
+}
+
+.tour-timeline {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #00796b;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-item .timeline-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-item .timeline-img {
+  width: 45%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.timeline-item .timeline-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.timeline-item .timeline-content h3 {
+  font-size: 1.8rem;
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+.timeline-item .timeline-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  text-align: right;
+  order: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-img {
+  order: 2;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  text-align: left;
+  order: 2;
+}
+
+.timeline-item:nth-child(even) .timeline-img {
+  order: 1;
+}
+
+
+/* Adjust for smaller screens */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .timeline-item .timeline-img,
+  .timeline-item .timeline-content {
+    width: 100%;
+  }
+
+  .timeline::after {
+    left: 5%;
+    width: 2px;
+  }
+}
+
+/* Animation */
+[data-aos] {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+/* Destination Section */
+.destination-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.custom-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: repeat(2, 300px); /* 2 rows */
+  gap: 15px; /* Gap between grid items */
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay Text */
+.overlay-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  text-align: left;
+}
+
+.overlay-text h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.overlay-text p {
+  font-size: 1rem;
+  margin: 5px 0 0 0;
+  opacity: 0.9;
+}
+
+/* Big and Small grid items */
+.big {
+  grid-column: span 2; /* Takes up 2 columns */
+}
+
+.small {
+  grid-column: span 1; /* Takes up 1 column */
+}
+
+/* Responsive: For tablets and smaller devices */
+@media (max-width: 992px) {
+  .custom-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    grid-template-rows: auto;
+  }
+
+  .big {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+
+  .small {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+}
+
+/* Mobile: Single column layout */
+@media (max-width: 576px) {
+  .custom-grid {
+    grid-template-columns: 1fr; /* Single column layout on mobile */
+  }
+
+  .big, .small {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+}
+
+.ad-banner-section {
+  padding: 40px 20px;
+  background-color: #f5f5f5; /* Light background for ad banner */
+  text-align: center;
+  margin-top: 20px; /* Add some spacing */
+}
+
+.ad-banner {
+  width: 100%; /* Full width responsive */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%;
+  display: block;
+  border-radius: 10px;
 }
