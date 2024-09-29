@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Request a Quote</title>
-    <link rel="stylesheet" type="text/css" href="css/termsandcon.css">
+    <link rel="stylesheet" type="text/css" href="css/quote.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,7 @@
             <a class="nav-link active custom-nav-link" href="termsandcon.html">Terms & Conditions</a>
           </li>
           <li class="nav-item"></li>
-            <a class="nav-link custom-nav-link" href="contactUs.html">Contact Us</a>
+            <a class="nav-link custom-nav-link" href="quote.html">Contact Us</a>
           </li>
           <button class="btn custom-btn" id="exploreBtn" onclick="window.location.href='quote.html'">Plan Your Trip</button>
         </ul>
@@ -52,58 +52,58 @@
     </div>
   </nav>
 
-<!-- Terms and Conditions Section -->
-<section class="terms-section container mt-5 mb-5" style="margin-top: 1180px;">
-  <div class="terms-content">
-    <h2 class="title">Terms & Conditions</h2>
-    <p>
-      <strong>GoGusto Travel and Tours</strong> acts only as an agent for suppliers and contractors and is not liable in any loss, injury, death, and accident or damage during the tour; however, we will give you full support and guidance. We provide you with licensed tour guides and coordinators who will assist the group during the actual tour. In cases where the personal valuables of the client are lost, the company shall not be held liable unless they are properly deposited in the safety boxes in any finalized accommodation.
-    </p>
-    <p>
-      The order of the itinerary is subject to change without prior notice (according to weather conditions). The contract must be signed 60 days before the tour as confirmation.
-    </p>
-    <ul>
-      <li>10% of the total as partial payment 60 days before the tour</li>
-      <li>40% of the total amount as 2nd payment 30 days before the tour</li>
-      <li>50% of the total amount as 3rd payment 7 days before the tour</li>
-    </ul>
+    <!-- FORM -->
+    <div class="container">
+        <form class="form" id="quote" action="thankyou.html" method="post" onsubmit="redirectToThankYou(); return false;">
+            <p class="title">Get a Quote</p>
+            <p class="message">Fill out the form below to request a personalized quote for your architectural project.</p>
+            <label>
+                <input required="" placeholder="" type="text" class="input" name="name">
+                <span>Full Name</span>
+            </label>
 
-    <h3 class="subtitle">Cancellation Policy</h3>
-    <p>
-      Once booking is confirmed and finalized, the Tour Package and All Land Arrangement bookings and the 50% down payment are Non-Refundable. There is No Refund for any unused tours, transport, or hotels. However, in the event of natural calamities and force majeure, or mandated government cancellations, Clients may be entitled to a refund, subject to the Supplier's (ex. Hotel) Terms and Conditions.
-    </p>
+            <label>
+                <input required="" placeholder="" type="email" class="input" name="email">
+                <span>Email</span>
+            </label>
 
-    <h3 class="subtitle">Terms of Payment</h3>
-    <p><strong>Philippine Peso (cash)</strong></p>
-    <p><strong>GCash/Maya:</strong> 09058536578 (Christine Anne Belinario)</p>
-    <p><strong>Online/Mobile Banking/Bank Deposit:</strong></p>
-    <ul>
-      <li>Provide a copy of deposit slip</li>
-      <li>Provide a screenshot/proof of payment</li>
-    </ul>
-    <p><strong>Metro Bank Account:</strong></p>
-    <ul>
-      <li>Account name: Christine Anne Belinario</li>
-      <li>Account Number: 10159765432</li>
-    </ul>
-    <p><strong>UnionBank Account:</strong></p>
-    <ul>
-      <li>Account name: Christine Anne Belinario</li>
-      <li>Account Number: 120198765432</li>
-    </ul>
-    <p><strong>BPI Account:</strong></p>
-    <ul>
-      <li>Account name: Christine Anne Belinario</li>
-      <li>Account Number: 10998765432</li>
-    </ul>
-    <p><strong>BDO Account:</strong></p>
-    <ul>
-      <li>Account name: Christine Anne Belinario</li>
-      <li>Account Number: 20198765432</li>
-    </ul>
-    <p><strong>If cheque:</strong> Payable to GoGusto Travel and Tours</p>
-  </div>
-</section>
+            <label>
+                <select class="input" required>
+                  <option value="" disabled selected>Select Project Type</option>
+                  <option value="Residential">Residential</option>
+                  <option value="Commercial">Commercial</option>
+                  <option value="Other">Other</option>
+                </select>
+            </label>
+
+            <label>
+                <textarea required="" placeholder="" class="input" name="project_description" rows="4"></textarea>
+                <span>Project Description</span>
+            </label>
+
+            <label>
+                <input required="" placeholder="" type="text" class="input" name="budget">
+                <span>Estimated Budget</span>
+            </label>
+
+            <label>
+                <input required placeholder=" " type="text" class="input" name="completion_date" id="completion_date">
+                <span>Desired Completion Date (dd/mm/yyyy)</span>
+            </label>
+            <!-- <label>
+                <input required="" placeholder="" type="date" class="input" name="completion_date">
+                <span>Desired Completion Date</span>
+            </label> -->
+
+            <label>
+                <input type="file" class="input" placeholder="Optional">
+            </label>
+
+            <!--SUBMIT BUTTON-->
+            <input type="submit" name="submit" class="btn-request-quote" value="Request Quote">
+
+        </form>
+    </div>
 
     <!-- Footer -->
     <footer>
